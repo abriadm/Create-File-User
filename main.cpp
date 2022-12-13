@@ -37,7 +37,7 @@ int main()
 	getline(cin, file_name);
 	cout << "Enter username: ";
 	getline(cin, username);
-	cout << "Enter password: ";
+	cout << "Enter code: ";
 	cin >> password;
 	// Function call {create_file} with three parameter (username, password, file_name)
 	create_file(username, password, file_name);
