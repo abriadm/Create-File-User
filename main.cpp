@@ -11,7 +11,7 @@ using std::string;
 using std::ofstream;
 
 // With Object Oriented Programming
-void create_file(string username, string password, string file_name)
+void create_file(string username,int password, string file_name)
 {
 	ofstream file(file_name + ".txt");
 	// Checks whether file is open.
@@ -21,15 +21,17 @@ void create_file(string username, string password, string file_name)
 	}
 	// For username.
 	file << "Username: ";
-	file << username;
+	file << username << endl;
+	// For password.
 	file << "Your Code: ";
-	file << password;
-
+	file << password << endl;
+	file.close();
 }
 
 int main()
 {
-	string username, password, file_name;
+	int password;
+	string username, file_name;
 	cout << "<-----Create a User File----->" << endl;
 	cout << "Enter file name: ";
 	getline(cin, file_name);
