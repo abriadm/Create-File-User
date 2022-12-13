@@ -10,6 +10,17 @@ using std::vector;
 using std::string;
 using std::ofstream;
 
+// With Object Oriented Programming
+void create_file(string username, string password, string file_name)
+{
+	ofstream file(file_name + ".txt");
+	// Checks whether file is open.
+	if (file.is_open())
+	{
+		cout << "\nYes is open!!" << endl;
+	}
+}
+
 int main()
 {
 	string username, password, file_name;
@@ -20,6 +31,9 @@ int main()
 	cin >> username;
 	cout << "Enter password: ";
 	cin >> password;
+	// Function call {create_file} with three parameter (username, password, file_name)
+	create_file(username, password, file_name);
 
+	system("pause 0");
 	return 0;
 }
