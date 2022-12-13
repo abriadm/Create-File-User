@@ -19,6 +19,10 @@ void create_file(string username, string password, string file_name)
 	{
 		cout << "\nYes is open!!" << endl;
 	}
+	// Create vector to strore a string.
+	vector<string> names;
+	names.push_back(username);
+	names.push_back(password);
 }
 
 int main()
