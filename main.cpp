@@ -19,10 +19,12 @@ void create_file(string username, string password, string file_name)
 	{
 		cout << "\nYes is open!!" << endl;
 	}
-	// Create vector to strore a string.
-	vector<string> names;
-	names.push_back(username);
-	names.push_back(password);
+	// For username.
+	file << "Username: ";
+	file << username;
+	file << "Your Code: ";
+	file << password;
+
 }
 
 int main()
@@ -30,9 +32,9 @@ int main()
 	string username, password, file_name;
 	cout << "<-----Create a User File----->" << endl;
 	cout << "Enter file name: ";
-	cin >> file_name;
+	getline(cin, file_name);
 	cout << "Enter username: ";
-	cin >> username;
+	getline(cin, username);
 	cout << "Enter password: ";
 	cin >> password;
 	// Function call {create_file} with three parameter (username, password, file_name)
